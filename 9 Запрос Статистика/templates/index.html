@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}" />
+</head>
+<body>
+    <h1>Vk.com Statistics</h1>
+
+    <h2>Activites</h2>
+    <table>
+        {% for k, v in activities.items() %}
+          <tr>
+            <td>{{k}}</td>
+            <td>{{v}}</td>
+          </tr>
+        {% endfor %}
+    </table>
+    
+    <h2>Ages</h2>
+    <table>
+        {% for k, v in ages.items() %}
+            <tr>
+              <td>{{k}}</td>
+              <td>{{v}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    
+    <h2>Cities</h2>
+    <table>
+        {% for city in cities %}
+            <tr>
+              <td>{{city}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
